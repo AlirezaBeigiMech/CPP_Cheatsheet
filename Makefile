@@ -1,21 +1,26 @@
-# Makefile for pointer_summary_demo
-
 # Compiler and flags
 CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17
 
-# Target executable
-TARGET = pointer
+# Output directory
+OUT_DIR = out
 
-# Source files
-SRCS = pointer.cpp
+# All cpp source files
+SRCS = $(wildcard *.cpp)
+
+# Generate list of targets: out/eg0_array out/eg1_pointer ...
+TARGETS = $(patsubst %.cpp,$(OUT_DIR)/%,$(SRCS))
 
 # Default target
-all: $(TARGET)
+all: $(TARGETS)
 
-$(TARGET): $(SRCS)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+# Build rule: compile each .cpp into its own executable in out/
+$(OUT_DIR)/%: %.cpp
+	@mkdir -p $(OUT_DIR)
+	$(CXX) $(CXXFLAGS) -o $@ $<
 
 # Clean up build files
 clean:
-	rm -f $(TARGET)
+	rm -rf $(OUT_DIR)
+
+.PHONY: all clean
