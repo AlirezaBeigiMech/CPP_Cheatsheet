@@ -37,3 +37,8 @@ To run a specific example:
 ```bash
 ./out/eg1_pointer
 ```
+
+## 📖 References
+
+Some examples and concepts in this repository are inspired by the tutorials from [cplusplus.com](https://cplusplus.com/doc/tutorial/).
+Please refer to their website for more in-depth explanations and further learning.
