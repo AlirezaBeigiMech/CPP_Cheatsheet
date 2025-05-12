@@ -30,3 +30,10 @@ Each example will generate its own executable in the out/ directory. To clean al
 ```bash
 make clean
 ```
+
+## 🏃 Run Example
+
+To run a specific example:
+```bash
+./out/eg1_pointer
+```
