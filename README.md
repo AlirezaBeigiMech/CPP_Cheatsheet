@@ -25,8 +25,8 @@ This repository contains a collection of simple **C++ examples** demonstrating f
 To compile all examples:
 ```bash
 make
-```bash
+```
 Each example will generate its own executable in the out/ directory. To clean all outputs:
 ```bash
 make clean
-```bash
+```
